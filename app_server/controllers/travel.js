@@ -1,3 +1,5 @@
+const { Trips } = require('../models/trips');
+
 /**
  * GET Travelers page.
  *
@@ -6,7 +8,7 @@
  * @param next Express next function
  */
 const travelController = (req, res, next) => {
-  res.render('travel', { title: 'Travlr Getaways' });
+  res.render('travel', { title: 'Travlr Getaways', trips: Trips.findAll() });
 }
 
 module.exports = {
