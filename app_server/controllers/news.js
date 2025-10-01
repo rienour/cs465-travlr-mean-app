@@ -1,5 +1,5 @@
-const { News } = require('../models/news');
-const { Tips } = require('../models/tips');
+const { News } = require('../../app_api/models/news');
+const { Tips } = require('../../app_api/models/tips');
 
 
 /**

@@ -1,4 +1,4 @@
-const { Rooms } = require('../models/rooms');
+const { Rooms } = require('../../app_api/models/rooms');
 
 /**
  * GET Rooms page.

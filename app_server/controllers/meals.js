@@ -1,4 +1,4 @@
-const { Meals } = require('../models/meals');
+const { Meals } = require('../../app_api/models/meals');
 
 /**
  * GET Meals page.

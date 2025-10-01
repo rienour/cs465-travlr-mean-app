@@ -1,4 +1,4 @@
-const { Logger } = require('../logger/logger');
+const { Logger } = require('../../logger/logger');
 const Mongoose = require('./db.js');
 const Trip = require('./travlr.js');
 const fs = require('fs');

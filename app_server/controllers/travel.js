@@ -1,4 +1,4 @@
-const { Trips } = require('../models/trips');
+const { Trips } = require('../../app_api/models/trips');
 
 /**
  * GET Travelers page.
