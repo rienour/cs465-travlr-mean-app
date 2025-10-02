@@ -1,5 +1,5 @@
-const fs = require('node:fs');
-const tips = JSON.parse(fs.readFileSync('./data/tips.json', 'utf-8'));
+const fs = require("node:fs");
+const tips = JSON.parse(fs.readFileSync("./data/tips.json", "utf-8"));
 
 /**
  * This model provides access to the data for tips related information

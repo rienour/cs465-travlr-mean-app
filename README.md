@@ -33,4 +33,3 @@ Use frameworks to include rich functionality and features in a SPA to meet softw
 ### Security
 
 Refactor the code to add security controls, including a login form, and apply best practices to ensure authorized access using secure endpoints.
-

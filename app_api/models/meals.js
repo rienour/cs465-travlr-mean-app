@@ -1,5 +1,5 @@
-const fs = require('node:fs');
-const meals = JSON.parse(fs.readFileSync('./data/meals.json', 'utf-8'));
+const fs = require("node:fs");
+const meals = JSON.parse(fs.readFileSync("./data/meals.json", "utf-8"));
 
 /**
  * This model provides access to the data for meals related information

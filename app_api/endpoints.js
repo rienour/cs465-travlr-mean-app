@@ -2,10 +2,10 @@ module.exports = {
   trips: {
     url: "http://localhost:3000/api/trips",
     options: {
-      method: 'GET',
+      method: "GET",
       headers: {
         Accept: "application/json",
-      }
-    }
-  }
-}
+      },
+    },
+  },
+};

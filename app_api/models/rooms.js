@@ -1,5 +1,5 @@
-const fs = require('node:fs');
-const rooms = JSON.parse(fs.readFileSync('./data/rooms.json', 'utf-8' ));
+const fs = require("node:fs");
+const rooms = JSON.parse(fs.readFileSync("./data/rooms.json", "utf-8"));
 
 /**
  * This model provides access to the data for rooms related information

@@ -6,8 +6,8 @@
  * @param next Express next function
  */
 const contactController = (req, res, next) => {
-  res.render('contact', { title: 'Travlr Getaways' });
-}
+  res.render("contact", { title: "Travlr Getaways" });
+};
 
 module.exports = {
   contactController,

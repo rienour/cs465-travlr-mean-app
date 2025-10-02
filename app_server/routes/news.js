@@ -1,10 +1,10 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const { newsController } = require('../controllers/news')
+const { newsController } = require("../controllers/news");
 
 /**
  * GET News Page
  */
-router.get('/', newsController);
+router.get("/", newsController);
 
 module.exports = router;

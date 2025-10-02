@@ -6,8 +6,8 @@
  * @param next Express next function
  */
 const homeController = (req, res, next) => {
-  res.render('index', { title: 'Express' });
-}
+  res.render("index", { title: "Express" });
+};
 
 module.exports = {
   homeController,

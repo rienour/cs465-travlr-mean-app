@@ -1,5 +1,5 @@
-const fs = require('node:fs');
-const news = JSON.parse(fs.readFileSync('./data/news.json', 'utf-8'));
+const fs = require("node:fs");
+const news = JSON.parse(fs.readFileSync("./data/news.json", "utf-8"));
 
 /**
  * This model provides access to the data for news related information

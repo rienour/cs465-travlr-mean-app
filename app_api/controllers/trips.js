@@ -1,10 +1,10 @@
-const mongoose = require("mongoose")
-const Trip = require("../models/travlr")
-const Model = mongoose.model('trips')
+const mongoose = require("mongoose");
+const Trip = require("../models/travlr");
+const Model = mongoose.model("trips");
 
 /**
-  * GET: /trips - lists all the trips
-  */
+ * GET: /trips - lists all the trips
+ */
 const tripsList = async (req, res) => {
   const result = await Model.find({}).exec();
 
@@ -13,11 +13,11 @@ const tripsList = async (req, res) => {
   } else {
     return res.status(404).err(err);
   }
-}
+};
 
 /**
-  * GET: /trips/:code - lists all the trips
-  */
+ * GET: /trips/:code - lists all the trips
+ */
 const tripsByCode = async (req, res) => {
   const result = await Model.find({ code: req.params.code }).exec();
 
@@ -26,8 +26,8 @@ const tripsByCode = async (req, res) => {
   } else {
     return res.status(404).err(err);
   }
-}
+};
 module.exports = {
   tripsList,
   tripsByCode,
-}
+};

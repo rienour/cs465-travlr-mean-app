@@ -1,4 +1,4 @@
-const { Meals } = require('../../app_api/models/meals');
+const { Meals } = require("../../app_api/models/meals");
 
 /**
  * GET Meals page.
@@ -8,8 +8,8 @@ const { Meals } = require('../../app_api/models/meals');
  * @param next Express next function
  */
 const mealsController = (req, res, next) => {
-  res.render('meals', { title: 'Travlr Getaways', meals: Meals.findAll() });
-}
+  res.render("meals", { title: "Travlr Getaways", meals: Meals.findAll() });
+};
 
 module.exports = {
   mealsController,

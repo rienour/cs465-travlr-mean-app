@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "seed": "node ./app_api/models/seed.js"
+    "seed": "node ./app_api/models/seed.js",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -14,5 +15,8 @@
     "http-errors": "~1.6.3",
     "mongoose": "^8.18.2",
     "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
   }
 }

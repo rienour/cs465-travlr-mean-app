@@ -1,4 +1,4 @@
-const { Rooms } = require('../../app_api/models/rooms');
+const { Rooms } = require("../../app_api/models/rooms");
 
 /**
  * GET Rooms page.
@@ -8,8 +8,8 @@ const { Rooms } = require('../../app_api/models/rooms');
  * @param next Express next function
  */
 const roomsController = (req, res, next) => {
-  res.render('rooms', { title: 'Travlr Getaways', rooms: Rooms.findAll() });
-}
+  res.render("rooms", { title: "Travlr Getaways", rooms: Rooms.findAll() });
+};
 
 module.exports = {
   roomsController,

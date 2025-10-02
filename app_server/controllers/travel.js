@@ -1,4 +1,4 @@
-const { trips } = require("../../app_api/endpoints")
+const { trips } = require("../../app_api/endpoints");
 
 /**
  * GET Travelers page.
@@ -13,17 +13,17 @@ const travelController = async (req, res, next) => {
     .then((json) => {
       let message = null;
       if (!(json instanceof Array)) {
-        message = "Trip Lookup error"
+        message = "Trip Lookup error";
       } else if (json.length === 0) {
-        message = "No trips found"
+        message = "No trips found";
       }
-      res.render('travel', { title: 'Travlr Getaways', trips: json, message })
+      res.render("travel", { title: "Travlr Getaways", trips: json, message });
     })
     .catch((err) => {
-      logger.error(err instanceof Error ? err.message : err)
-      return res.status(500).send('Unable to process trips')
+      logger.error(err instanceof Error ? err.message : err);
+      return res.status(500).send("Unable to process trips");
     });
-}
+};
 
 module.exports = {
   travelController,

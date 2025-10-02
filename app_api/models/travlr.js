@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const tripSchema = new mongoose.Schema({
   code: { type: String, required: true, index: true },
@@ -11,6 +11,6 @@ const tripSchema = new mongoose.Schema({
   descriptions: { type: [String], required: true },
 });
 
-const Trip = mongoose.model('trips', tripSchema);
+const Trip = mongoose.model("trips", tripSchema);
 
 module.exports = Trip;
