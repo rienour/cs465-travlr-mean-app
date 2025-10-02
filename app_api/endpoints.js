@@ -16,5 +16,23 @@ module.exports = {
         Accept: "application/json",
       },
     },
+  },
+  news: {
+    url: "http://localhost:3000/api/news",
+    options: {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    },
+  },
+  tips: {
+    url: "http://localhost:3000/api/tips",
+    options: {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    },
   }
 };

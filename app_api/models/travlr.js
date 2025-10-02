@@ -22,7 +22,27 @@ const mealSchema = new mongoose.Schema({
 
 const Meal = mongoose.model("meals", mealSchema);
 
+const newSchema = new mongoose.Schema({
+  id: { type: String, required: true, index: true },
+  headline: { type: String, required: true, index: true },
+  image: { type: String, required: false },
+  date: { type: String, required: false },
+  author: { type: String, required: false },
+  paragraphs: { type: [String], required: false },
+});
+
+const New = mongoose.model("news", newSchema);
+
+const tipSchema = new mongoose.Schema({
+  id: { type: Number, required: true, index: true },
+  title: { type: String, required: true, index: true },
+});
+
+const Tip = mongoose.model("tips", tipSchema);
+
 module.exports = {
   Trip,
+  Tip,
   Meal,
+  New,
 };

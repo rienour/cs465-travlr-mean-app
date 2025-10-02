@@ -1,20 +1,26 @@
 [
   {
+    "id": 0,
     "title": "What to bring on the beach?"
   },
   {
+    "id": 1,
     "title": "Planning Fun Activities"
   },
   {
+    "id": 2,
     "title": "Diving Checklist"
   },
   {
+    "id": 3,
     "title": "First Aid"
   },
   {
+    "id": 4,
     "title": "How to Build a Sand Castle?"
   },
   {
+    "id": 5,
     "title": "Tanning Tips"
   }
 ]

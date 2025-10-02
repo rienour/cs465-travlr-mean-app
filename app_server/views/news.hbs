@@ -18,7 +18,7 @@
 								<ul>
                   {{#each recents}}
 									<li>
-										<a href="/news">{{ headline }}</a>
+										<a href="/news/{{this.code}}">{{ headline }}</a>
 									</li>
                   {{/each}}
 								</ul>
@@ -26,7 +26,7 @@
 								<ul>
                   {{#each tips}}
 									<li>
-										<a href="/news">{{ title }}</a>
+										<a href="/tips/{{this.id}}">{{ title }}</a>
 									</li>
                   {{/each}}
 								</ul>

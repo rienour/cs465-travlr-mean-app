@@ -1,6 +1,6 @@
 const { Logger } = require("../../logger/logger");
 const Mongoose = require("./db.js");
-const { Trip, Meal } = require("./travlr.js");
+const { Trip, Meal, New, Tip } = require("./travlr.js");
 const fs = require("fs");
 
 const trips = JSON.parse(
@@ -9,12 +9,22 @@ const trips = JSON.parse(
 const meals = JSON.parse(
   fs.readFileSync(`${__dirname}/../../data/meals.json`, "utf8"),
 );
+const news = JSON.parse(
+  fs.readFileSync(`${__dirname}/../../data/news.json`, "utf8"),
+);
+const tips = JSON.parse(
+  fs.readFileSync(`${__dirname}/../../data/tips.json`, "utf8"),
+);
 
 const seedDB = async () => {
   await Trip.deleteMany({});
   await Trip.insertMany(trips);
   await Meal.deleteMany({});
   await Meal.insertMany(meals);
+  await New.deleteMany({});
+  await New.insertMany(news);
+  await Tip.deleteMany({});
+  await Tip.insertMany(tips);
 };
 
 seedDB()

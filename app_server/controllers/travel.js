@@ -1,3 +1,4 @@
+const { Logger } = require("../../logger/logger")
 const { trips } = require("../../app_api/endpoints");
 
 /**
@@ -20,7 +21,7 @@ const travelController = async (req, res, next) => {
       res.render("travel", { title: "Travlr Getaways", trips: json, message });
     })
     .catch((err) => {
-      logger.error(err instanceof Error ? err.message : err);
+      Logger.error(err instanceof Error ? err.message : err);
       return res.status(500).send("Unable to process trips");
     });
 };
