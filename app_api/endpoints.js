@@ -8,4 +8,13 @@ module.exports = {
       },
     },
   },
+  meals: {
+    url: "http://localhost:3000/api/meals",
+    options: {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    },
+  }
 };
