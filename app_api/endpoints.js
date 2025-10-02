@@ -34,5 +34,14 @@ module.exports = {
         Accept: "application/json",
       },
     },
+  },
+  rooms: {
+    url: "http://localhost:3000/api/rooms",
+    options: {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    },
   }
 };

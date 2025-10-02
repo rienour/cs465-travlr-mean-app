@@ -40,9 +40,20 @@ const tipSchema = new mongoose.Schema({
 
 const Tip = mongoose.model("tips", tipSchema);
 
+const roomSchema = new mongoose.Schema({
+  code: { type: String, required: true, index: true },
+  name: { type: String, required: true, index: true },
+  image: { type: String, required: true },
+  description: { type: String, required: true },
+  rate: { type: Number, required: true, index: true },
+});
+
+const Room = mongoose.model("rooms", roomSchema);
+
 module.exports = {
   Trip,
   Tip,
   Meal,
   New,
+  Room,
 };
