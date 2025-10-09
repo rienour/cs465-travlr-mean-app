@@ -1,5 +1,5 @@
-const { Logger } = require("../../logger/logger")
-const { rooms } = require("../../app_api/endpoints")
+const { Logger } = require("../../logger/logger");
+const { rooms } = require("../../app_api/endpoints");
 
 /**
  * GET Rooms page.

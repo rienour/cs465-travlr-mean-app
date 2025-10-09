@@ -1,5 +1,5 @@
-const { Logger } = require("../../logger/logger")
-const { news, tips } = require("../../app_api/endpoints")
+const { Logger } = require("../../logger/logger");
+const { news, tips } = require("../../app_api/endpoints");
 
 /**
  * GET News page.
@@ -19,7 +19,7 @@ const newsController = async (req, res, next) => {
       } else if (json.length === 0) {
         message = "News not found";
       } else {
-        story = json
+        story = json;
       }
     })
     .catch((err) => {
@@ -37,7 +37,7 @@ const newsController = async (req, res, next) => {
       } else if (json.length === 0) {
         message = "No recents found";
       } else {
-        recents = json
+        recents = json;
       }
     })
     .catch((err) => {
@@ -55,7 +55,7 @@ const newsController = async (req, res, next) => {
       } else if (json.length === 0) {
         message = "No tips found";
       } else {
-        tipList = json
+        tipList = json;
       }
     })
     .catch((err) => {
@@ -63,7 +63,12 @@ const newsController = async (req, res, next) => {
       return res.status(500).send("Unable to process tips");
     });
 
-  res.render("news", { title: "Travlr Getaways", story, recents, tips: tipList });
+  res.render("news", {
+    title: "Travlr Getaways",
+    story,
+    recents,
+    tips: tipList,
+  });
 };
 
 module.exports = {

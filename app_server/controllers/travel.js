@@ -1,4 +1,4 @@
-const { Logger } = require("../../logger/logger")
+const { Logger } = require("../../logger/logger");
 const { trips } = require("../../app_api/endpoints");
 
 /**

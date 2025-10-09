@@ -43,5 +43,5 @@ module.exports = {
         Accept: "application/json",
       },
     },
-  }
+  },
 };
