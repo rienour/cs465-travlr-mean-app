@@ -27,7 +27,31 @@ const tripsByCode = async (req, res) => {
     return res.status(404).err(err);
   }
 };
+
+/**
+ * POST: /trips - creates a new trip
+ */
+const addTrip = async (req, res) => {
+  const newTrip = new Model({
+    code: req.body.code,
+    name: req.body.name,
+    length: req.body.length,
+    start: req.body.start,
+    resort: req.body.resort,
+    perPerson: req.body.perPerson,
+    image: req.body.image,
+    descriptions: [],
+  });
+
+  const q = await newTrip.save();
+  if (!q) {
+    return res.status(400).json(err);
+  } else {
+    return res.status(201).json(q);
+  }
+};
 module.exports = {
   tripsList,
   tripsByCode,
+  addTrip,
 };
