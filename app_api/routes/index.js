@@ -10,7 +10,10 @@ router
   .route("/trips")
   .get(tripsController.tripsList)
   .post(tripsController.addTrip);
-router.route("/trips/:code").get(tripsController.tripsByCode);
+router
+  .route("/trips/:code")
+  .get(tripsController.tripsByCode)
+  .put(tripsController.tripsUpdateTrip);
 router.route("/meals").get(mealsController.mealsList);
 router.route("/meals/:code").get(mealsController.mealsByCode);
 router.route("/news").get(newsController.newsList);

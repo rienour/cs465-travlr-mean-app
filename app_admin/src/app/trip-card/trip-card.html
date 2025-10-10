@@ -11,5 +11,8 @@
     <p *ngFor="let text of trip.descriptions" class="card-text">
       {{ text }}
     </p>
+    <div>
+      <button (click)="editTrip(trip)" class="btn btn-info">Edit Trip</button>
+    </div>
   </div>
 </div>

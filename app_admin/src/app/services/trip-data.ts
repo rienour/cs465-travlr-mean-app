@@ -10,11 +10,19 @@ export class TripData {
   constructor(private http: HttpClient) {}
   url = 'http://localhost:3000/api/trips';
 
+  getTrip(code: string): Observable<Trip> {
+    return this.http.get<Trip>(this.url + '/' + code);
+  }
+
   getTrips(): Observable<Trip[]> {
     return this.http.get<Trip[]>(this.url);
   }
 
   addTrip(formData: Trip): Observable<Trip> {
     return this.http.post<Trip>(this.url, formData);
+  }
+
+  updateTrip(formData: Trip): Observable<Trip> {
+    return this.http.put<Trip>(this.url + '/' + formData.code, formData);
   }
 }
