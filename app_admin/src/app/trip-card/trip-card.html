@@ -11,7 +11,7 @@
     <p *ngFor="let text of trip.descriptions" class="card-text">
       {{ text }}
     </p>
-    <div>
+    <div *ngIf="isLoggedIn()">
       <button (click)="editTrip(trip)" class="btn btn-info">Edit Trip</button>
     </div>
   </div>
